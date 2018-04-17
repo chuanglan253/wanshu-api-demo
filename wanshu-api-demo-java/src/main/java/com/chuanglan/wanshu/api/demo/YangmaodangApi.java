@@ -13,7 +13,7 @@ public class YangmaodangApi {
 
     private static String APP_KEY_YANGMAODANG = "12345678";
 
-    private static String API_URL_YANGMAODANG = "http://*.*.*.*:*/open/woolCheck";
+    private static String API_URL_YANGMAODANG = "https://api.253.com/open/woolCheck";
 
     private static JsonParser jsonParser = new JsonParser();
 

@@ -13,7 +13,7 @@ public class ShenfenApi {
 
     private static String APP_KEY_SHENFEN = "12345678";
 
-    private static String API_URL_SHENFEN = "http://*.*.*.*:*/open/idVerify";
+    private static String API_URL_SHENFEN = "https://api.253.com/open/idVerify";
 
     private static JsonParser jsonParser = new JsonParser();
 

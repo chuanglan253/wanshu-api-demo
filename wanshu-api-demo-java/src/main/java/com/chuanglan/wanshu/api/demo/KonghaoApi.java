@@ -13,7 +13,7 @@ public class KonghaoApi {
 
     private static String APP_KEY_KONGHAO = "12345678";
 
-    private static String API_URL_KONGHAO = "http://*.*.*.*:*/open/unnCheck";
+    private static String API_URL_KONGHAO = "https://api.253.com/open/unnCheck";
 
     private static JsonParser jsonParser = new JsonParser();
 
