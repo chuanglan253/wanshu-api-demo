@@ -9,7 +9,7 @@ namespace wanshu_api_demo
 	{
 		const string APP_ID_YANGMAODANG = "12345678";
         const string APP_KEY_YANGMAODANG = "12345678";
-        const string API_URL_YANGMAODANG = "https://api.253.com/open/woolCheck";
+        const string API_URL_YANGMAODANG = "https://api.253.com:8082/open/woolCheck";
     
 		public void Check()
 		{

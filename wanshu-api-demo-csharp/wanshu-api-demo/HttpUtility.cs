@@ -152,8 +152,8 @@ namespace wanshu_api_demo
 			Stream responseStream = null;  
 			StreamReader sReader = null;  
 			string value = null;  
-  
-			try {  
+			
+			try { 	
 				// 获取响应流  
 				responseStream = httpWebResponse.GetResponseStream();  
 				// 对接响应流(以"utf-8"字符集)  
