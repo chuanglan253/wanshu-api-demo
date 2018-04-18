@@ -141,8 +141,8 @@ namespace wanshu_api_demo
 		/// <summary>  
 		/// 获取数据  
 		/// </summary>  
-		/// <param name="HttpWebResponse">响应对象</param>  
-		/// <returns></returns>  
+		/// <param name="httpWebResponse">响应对象</param>  
+		/// <returns>返回字符串</returns>  
 		private static string OpenReadWithHttps(HttpWebResponse httpWebResponse)
 		{  
 			if (httpWebResponse == null) {
@@ -154,12 +154,14 @@ namespace wanshu_api_demo
 			string value = null;  
 			
 			try { 	
-				// 获取响应流  
-				responseStream = httpWebResponse.GetResponseStream();  
-				// 对接响应流(以"utf-8"字符集)  
-				sReader = new StreamReader(responseStream, ENCODING);  
-				// 开始读取数据  
-				value = sReader.ReadToEnd();  
+				if (HttpStatusCode.OK.Equals(httpWebResponse.StatusCode)) {
+					// 获取响应流  
+					responseStream = httpWebResponse.GetResponseStream();  
+					// 对接响应流(以"utf-8"字符集)  
+					sReader = new StreamReader(responseStream, ENCODING);  
+					// 开始读取数据  
+					value = sReader.ReadToEnd();  
+				}
 			} catch (Exception ex) {  
 				Console.WriteLine(ex); //正式项目中请改为log打印
 			} finally {  
