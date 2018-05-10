@@ -52,24 +52,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BianGengJiLuApi.cs" />
-    <Compile Include="DongJianGaoApi.cs" />
-    <Compile Include="DuiWaiTouZiApi.cs" />
-    <Compile Include="FenZhiJiGouApi.cs" />
-    <Compile Include="GuDongXinXiApi.cs" />
     <Compile Include="HttpUtility.cs" />
-    <Compile Include="JingYingYiChangApi.cs" />
     <Compile Include="KonghaoApi.cs" />
-    <Compile Include="LianXiXinXiApi.cs" />
-    <Compile Include="MoHuChaXunApi.cs" />
-    <Compile Include="NianBaoLieBiaoApi.cs" />
-    <Compile Include="NianBaoXiangQingApi.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="SanYaoSuApi.cs" />
+    <Compile Include="QiYeGongShang\BianGengJiLuApi.cs" />
+    <Compile Include="QiYeGongShang\DongJianGaoApi.cs" />
+    <Compile Include="QiYeGongShang\DuiWaiTouZiApi.cs" />
+    <Compile Include="QiYeGongShang\FenZhiJiGouApi.cs" />
+    <Compile Include="QiYeGongShang\GuDongXinXiApi.cs" />
+    <Compile Include="QiYeGongShang\JingYingYiChangApi.cs" />
+    <Compile Include="QiYeGongShang\LianXiXinXiApi.cs" />
+    <Compile Include="QiYeGongShang\MoHuChaXunApi.cs" />
+    <Compile Include="QiYeGongShang\NianBaoLieBiaoApi.cs" />
+    <Compile Include="QiYeGongShang\NianBaoXiangQingApi.cs" />
+    <Compile Include="QiYeGongShang\SanYaoSuApi.cs" />
+    <Compile Include="QiYeGongShang\YingYeZhiZhaoApi.cs" />
     <Compile Include="ShenfenApi.cs" />
     <Compile Include="YangmaodangApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YingYeZhiZhaoApi.cs" />
     <Compile Include="YinhangkaApi.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib" />
+    <Folder Include="QiYeGongShang" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

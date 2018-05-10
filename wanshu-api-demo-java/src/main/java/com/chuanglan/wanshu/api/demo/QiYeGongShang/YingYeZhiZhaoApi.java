@@ -1,4 +1,4 @@
-package com.chuanglan.wanshu.api.demo;
+package com.chuanglan.wanshu.api.demo.QiYeGongShang;
 
 import java.util.HashMap;
 import java.util.Map;

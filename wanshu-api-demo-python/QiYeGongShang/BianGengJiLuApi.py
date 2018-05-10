@@ -5,6 +5,7 @@ from urllib2 import Request, urlopen, URLError
 import urllib
 import json
 
+#变更记录查询接口样例
 
 def post(url, data):
     params = urllib.urlencode(data)
@@ -23,20 +24,18 @@ def post(url, data):
 
 
 if __name__ == "__main__":
-    invoke_url = 'https://api.253.com/open/bankcard/card-auth'
-    invoke_data = {'appId': '12345678', 'appKey': '12345678', 'name': '李*', 'idNum': '34221119930101****',
-                   'mobile': '1591234****', 'cardNo': '621233211111****'}
+    invoke_url = 'https://api.253.com/open/company/change-record'
+    invoke_data = {'appId': '12345678', 'appKey': '12345678', 'companyKey': 'ABC', 'keyType': '1', 'pageSize': 10, 'pageIndex':0}
 
-    # 1. 调用银行卡四要素认证api
+    # 1. 调用api
     result_data = post(invoke_url, invoke_data)
     # 2.处理返回结果
     result = json.loads(result_data) if result_data is not None else exit(1)
     # 响应code码。200000：成功，其他失败
     if result is None or '200000' != result['code']:
-        print u'调用银行卡四要素认证失败,code:', result['code'], ',msg:', result['message']
+        print u'调用失败,code:', result['code'], ',msg:', result['message']
     else:
-        # 调用银行卡四要素认证成功
+        # 调用成功
         # 解析结果数据，进行业务处理
-        # 检测结果 01-一致，02-不一致，03-认证不确定，04-认证失败。   01、02收费
-        status = result['data']['result']
-        print u'调用银行卡四要素认证成功,status:', status
+        # 检测结果
+        print u'调用成功,result:', result['data']

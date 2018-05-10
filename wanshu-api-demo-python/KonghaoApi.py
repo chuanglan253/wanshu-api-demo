@@ -23,7 +23,7 @@ def post(url, data):
 
 
 if __name__ == "__main__":
-    invoke_url = 'https://api.253.com/open/unnCheck'
+    invoke_url = 'https://api.253.com/open/unn/ucheck'
     invoke_data = {'appId': '12345678', 'appKey': '12345678', 'mobile': '1821234****'}
 
     # 1. 调用空号检测api
