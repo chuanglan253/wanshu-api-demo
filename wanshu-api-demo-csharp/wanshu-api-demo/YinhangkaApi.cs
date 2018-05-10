@@ -9,7 +9,7 @@ namespace wanshu_api_demo
 	{
 		const string APP_ID_YINHANGKA = "12345678";
         const string APP_KEY_YINHANGKA = "12345678";
-        const string API_URL_YINHANGKA = "https://api.253.com/open/cardAuth";
+        const string API_URL_YINHANGKA = "http://localhost:8888/open/bankcard/card-auth";
     
 		public void Check()
 		{
@@ -21,7 +21,7 @@ namespace wanshu_api_demo
 	        if (jsonObject != null) {
 	            //响应code码。200000：成功，其他失败
 	            string code = jsonObject["code"].ToString();
-	            if ("200000".Equals(code)) {
+	            if ("200000".Equals(code) && null != jsonObject["data"]) {
 	                // 调用银行卡四要素认证成功
 	                // 解析结果数据，进行业务处理
 	                // 认证结果   01-一致，02-不一致，03-认证不确定，04-认证失败。   01、02收费

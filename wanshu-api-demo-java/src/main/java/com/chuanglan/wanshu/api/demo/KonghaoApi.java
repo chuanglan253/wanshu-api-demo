@@ -6,14 +6,16 @@ import com.google.gson.JsonParser;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 空号检测
+ */
 public class KonghaoApi {
 
-    private static String APP_ID_KONGHAO = "12345678";
+    private static String APP_ID_KONGHAO = "qqqqqqqq";
 
-    private static String APP_KEY_KONGHAO = "12345678";
+    private static String APP_KEY_KONGHAO = "qqqqqqqq";
 
-    private static String API_URL_KONGHAO = "https://api.253.com/open/unnCheck";
+    private static String API_URL_KONGHAO = "https://api.253.com/open/unn/ucheck";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -25,7 +27,7 @@ public class KonghaoApi {
         if (jsonObject != null) {
             //响应code码。200000：成功，其他失败
             String code = jsonObject.get("code").getAsString();
-            if ("200000".equals(code)) {
+            if ("200000".equals(code) && jsonObject.get("data") != null) {
                 // 调用空号检测成功
                 // 解析结果数据，进行业务处理
                 // 检测结果  0:空号  1:实号  2:停机  3:库无  4:沉默号

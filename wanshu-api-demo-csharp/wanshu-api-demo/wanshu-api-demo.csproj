@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>gateway_api_demo</RootNamespace>
+    <RootNamespace>wanshu_api_demo</RootNamespace>
     <AssemblyName>wanshu-api-demo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -52,12 +52,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BianGengJiLuApi.cs" />
+    <Compile Include="DongJianGaoApi.cs" />
+    <Compile Include="DuiWaiTouZiApi.cs" />
+    <Compile Include="FenZhiJiGouApi.cs" />
+    <Compile Include="GuDongXinXiApi.cs" />
     <Compile Include="HttpUtility.cs" />
+    <Compile Include="JingYingYiChangApi.cs" />
     <Compile Include="KonghaoApi.cs" />
+    <Compile Include="LianXiXinXiApi.cs" />
+    <Compile Include="MoHuChaXunApi.cs" />
+    <Compile Include="NianBaoLieBiaoApi.cs" />
+    <Compile Include="NianBaoXiangQingApi.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="SanYaoSuApi.cs" />
     <Compile Include="ShenfenApi.cs" />
     <Compile Include="YangmaodangApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YingYeZhiZhaoApi.cs" />
     <Compile Include="YinhangkaApi.cs" />
   </ItemGroup>
   <ItemGroup>

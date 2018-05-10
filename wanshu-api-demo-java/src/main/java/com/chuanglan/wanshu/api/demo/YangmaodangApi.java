@@ -13,7 +13,7 @@ public class YangmaodangApi {
 
     private static String APP_KEY_YANGMAODANG = "12345678";
 
-    private static String API_URL_YANGMAODANG = "https://api.253.com/open/woolCheck";
+    private static String API_URL_YANGMAODANG = "https://api.253.com/open/wool/wcheck";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -25,7 +25,7 @@ public class YangmaodangApi {
         if (jsonObject != null) {
             //响应code码。200000：成功，其他失败
             String code = jsonObject.get("code").getAsString();
-            if ("200000".equals(code)) {
+            if ("200000".equals(code) && jsonObject.get("data") != null) {
                 // 调用羊毛党检测成功
                 // 解析结果数据，进行业务处理
                 // 检测结果  W1：白名单  W2：疑似白名单  B1 ：黑名单  B2 ：疑似黑名单  N：未找到

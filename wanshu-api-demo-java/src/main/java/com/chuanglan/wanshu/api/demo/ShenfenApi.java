@@ -6,14 +6,16 @@ import com.google.gson.JsonParser;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 身份二要素认证
+ */
 public class ShenfenApi {
 
-    private static String APP_ID_SHENFEN = "12345678";
+    private static String APP_ID_SHENFEN = "qqqqqqqq";
 
-    private static String APP_KEY_SHENFEN = "12345678";
+    private static String APP_KEY_SHENFEN = "qqqqqqqq";
 
-    private static String API_URL_SHENFEN = "https://api.253.com/open/idVerify";
+    private static String API_URL_SHENFEN = "https://api.253.com/open/idcard/id-verify";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -25,7 +27,7 @@ public class ShenfenApi {
         if (jsonObject != null) {
             //响应code码。200000：成功，其他失败
             String code = jsonObject.get("code").getAsString();
-            if ("200000".equals(code)) {
+            if ("200000".equals(code) && jsonObject.get("data") != null) {
                 // 调用身份信息校验成功
                 // 解析结果数据，进行业务处理
                 // 校验状态码  000000：成功，其他失败
