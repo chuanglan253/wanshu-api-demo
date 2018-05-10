@@ -5,7 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
-
+	/**
+	 * 营业执照查询，精准匹配查询
+	 */
 	public class YingYeZhiZhaoApi
 	{
 		const string APP_ID_KONGHAO = "qqqqqqqq";

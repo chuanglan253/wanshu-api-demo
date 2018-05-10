@@ -5,6 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
+	/**
+	 * 羊毛党检测
+	 */
 	class YangmaodangApi
 	{
 		const string APP_ID_YANGMAODANG = "12345678";

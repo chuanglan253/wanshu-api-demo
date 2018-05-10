@@ -5,6 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
+	/**
+	 * 银行卡四要素认证
+	 */
 	public class YinhangkaApi
 	{
 		const string APP_ID_YINHANGKA = "12345678";

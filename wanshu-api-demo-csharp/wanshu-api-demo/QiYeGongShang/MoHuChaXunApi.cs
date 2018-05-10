@@ -5,7 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
-
+	/**
+	 * 关键字模糊查询
+	 */
 	public class MoHuChaXunApi
 	{
 		const string APP_ID = "qqqqqqqq";

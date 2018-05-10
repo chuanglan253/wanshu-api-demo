@@ -5,6 +5,7 @@ from urllib2 import Request, urlopen, URLError
 import urllib
 import json
 
+#空号检测
 
 def post(url, data):
     params = urllib.urlencode(data)

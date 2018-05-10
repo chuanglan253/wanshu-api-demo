@@ -5,6 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
+	/**
+	 * 空号检测
+	 */
 	public class KonghaoApi
 	{
 		const string APP_ID_KONGHAO = "12345678";

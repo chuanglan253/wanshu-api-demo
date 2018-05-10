@@ -5,6 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
+	/**
+	 * 身份二要素认证
+	 */
 	public class ShenfenApi
 	{
 		const string APP_ID_SHENFEN = "12345678";

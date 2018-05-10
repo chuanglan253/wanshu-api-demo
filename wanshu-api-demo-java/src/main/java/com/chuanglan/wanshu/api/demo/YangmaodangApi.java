@@ -6,7 +6,9 @@ import com.google.gson.JsonParser;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 羊毛党检测
+ */
 public class YangmaodangApi {
 
     private static String APP_ID_YANGMAODANG = "12345678";

@@ -5,7 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
-
+	/**
+	 * 企业变更记录查询
+	 */
 	public class BianGengJiLuApi
 	{
 		const string APP_ID = "qqqqqqqq";

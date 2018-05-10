@@ -15,7 +15,7 @@ public class YinhangkaApi {
 
     private static String APP_KEY_YINHANGKA = "12345678";
 
-    private static String API_URL_YINHANGKA = "http://localhost:8888/open/bankcard/card-auth";
+    private static String API_URL_YINHANGKA = "https://api.253.com/open/bankcard/card-auth";
 
     private static JsonParser jsonParser = new JsonParser();
 

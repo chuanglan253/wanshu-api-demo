@@ -5,7 +5,9 @@ using Newtonsoft.Json.Linq;
 
 namespace wanshu_api_demo
 {
-
+	/**
+	 * 企业三要素验证查询
+	 */
 	public class SanYaoSuApi
 	{
 		const string APP_ID = "qqqqqqqq";

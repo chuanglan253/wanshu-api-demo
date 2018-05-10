@@ -8,7 +8,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 /**
- * 企业信息--年报详情
+ * 年报详情
  */
 public class NianBaoXiangQingApi {
 
