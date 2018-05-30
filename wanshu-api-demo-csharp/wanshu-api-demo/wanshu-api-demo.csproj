@@ -60,17 +60,37 @@
     <Compile Include="QiYeGongShang\DuiWaiTouZiApi.cs" />
     <Compile Include="QiYeGongShang\FenZhiJiGouApi.cs" />
     <Compile Include="QiYeGongShang\GuDongXinXiApi.cs" />
-    <Compile Include="QiYeGongShang\JingYingYiChangApi.cs" />
     <Compile Include="QiYeGongShang\LianXiXinXiApi.cs" />
+    <Compile Include="QiYeGongShang\LiShiCengYongMingApi.cs" />
     <Compile Include="QiYeGongShang\MoHuChaXunApi.cs" />
+    <Compile Include="QiYeGongShang\NaShuiRenShiBieHaoApi.cs" />
     <Compile Include="QiYeGongShang\NianBaoLieBiaoApi.cs" />
     <Compile Include="QiYeGongShang\NianBaoXiangQingApi.cs" />
     <Compile Include="QiYeGongShang\SanYaoSuApi.cs" />
     <Compile Include="QiYeGongShang\YingYeZhiZhaoApi.cs" />
+    <Compile Include="QiYeXinYong\ChouChaJianChaApi.cs" />
+    <Compile Include="QiYeXinYong\DongChanDiYaApi.cs" />
+    <Compile Include="QiYeXinYong\GuQuanChuZhiApi.cs" />
+    <Compile Include="QiYeXinYong\JingYingYiChangApi.cs" />
+    <Compile Include="QiYeXinYong\NaShuiXinYongApi.cs" />
+    <Compile Include="QiYeXinYong\QianShuiXinXiApi.cs" />
+    <Compile Include="QiYeXinYong\XingZhengChuFaApi.cs" />
+    <Compile Include="QiYeXinYong\YanZhongWeiFaApi.cs" />
     <Compile Include="ShenfenApi.cs" />
+    <Compile Include="SiFaFengXian\BeiZhiXingRenApi.cs" />
+    <Compile Include="SiFaFengXian\FaYuanGongGaoApi.cs" />
+    <Compile Include="SiFaFengXian\FaYuanSuSongApi.cs" />
+    <Compile Include="SiFaFengXian\KaiTingGongGaoApi.cs" />
+    <Compile Include="SiFaFengXian\ShiXinXinXiApi.cs" />
     <Compile Include="YangmaodangApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YinhangkaApi.cs" />
+    <Compile Include="YuEChaXunApi.cs" />
+    <Compile Include="ZhiShiChanChuan\RuanJianZhuZuoQuanApi.cs" />
+    <Compile Include="ZhiShiChanChuan\ShangBiaoXinXiApi.cs" />
+    <Compile Include="ZhiShiChanChuan\YuMingBeiAnApi.cs" />
+    <Compile Include="ZhiShiChanChuan\ZhuanLiXinXiApi.cs" />
+    <Compile Include="ZhiShiChanChuan\ZuoPinZhuZuoQuanApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -79,6 +99,9 @@
   <ItemGroup>
     <Folder Include="lib" />
     <Folder Include="QiYeGongShang" />
+    <Folder Include="QiYeXinYong" />
+    <Folder Include="SiFaFengXian" />
+    <Folder Include="ZhiShiChanChuan" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

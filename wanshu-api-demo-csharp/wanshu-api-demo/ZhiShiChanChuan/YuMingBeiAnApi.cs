@@ -6,13 +6,13 @@ using Newtonsoft.Json.Linq;
 namespace wanshu_api_demo
 {
 	/**
-	 * 企业经营异常查询
+	 * 域名备案接口样例
 	 */
-	public class JingYingYiChangApi
+	public class YuMingBeiAnApi
 	{
 		const string APP_ID = "qqqqqqqq";
 	    const string APP_KEY = "qqqqqqqq";	
-	    const string API_URL = "https://api.253.com/open/company/abnormal-operating";
+	    const string API_URL = "https://api.253.com/open/ipr/domain-regist";
 	
 	    public void Check() {
 	        // 1.调用api
@@ -23,13 +23,11 @@ namespace wanshu_api_demo
 	            //响应code码。200000：成功，其他失败
 	            string code = jsonObject["code"].ToString();
 	            if ("200000".Equals(code) && null != jsonObject["data"]) {
-	                string pageInfoStr = jsonObject["data"]["paging"].ToString();
-	                Console.WriteLine("公司异常经营信息查询成功，分页信息:"+pageInfoStr);
-                	String content = jsonObject["data"]["datas"].ToString();
-                	Console.WriteLine("公司异常经营信息查询成功,content is :" + content);
+	                string content = jsonObject["data"].ToString();
+                	Console.WriteLine("查询成功,content is :" + content);
 	            } else {
 	                // 记录错误日志，正式项目中请换成log打印
-	                Console.WriteLine("公司异常经营信息查询失败,code:" + code + ",msg:" + jsonObject["message"]);
+	                Console.WriteLine("查询失败,code:" + code + ",msg:" + jsonObject["message"]);
 	            }
 	        }
 	    }

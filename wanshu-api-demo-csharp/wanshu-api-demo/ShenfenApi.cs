@@ -12,7 +12,7 @@ namespace wanshu_api_demo
 	{
 		const string APP_ID_SHENFEN = "12345678";
 	    const string APP_KEY_SHENFEN = "12345678";
-	    const string API_URL_SHENFEN = "http://localhost:8888/open/idcard/id-verify";
+	    const string API_URL_SHENFEN = "https://api.253.com/open/idcard/id-verify";
 	
 	    public void Check() {
 	        // 1.调用身份信息校验api

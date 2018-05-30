@@ -12,7 +12,7 @@ namespace wanshu_api_demo
 	{
 		const string APP_ID_KONGHAO = "12345678";
 	    const string APP_KEY_KONGHAO = "12345678";	
-	    const string API_URL_KONGHAO = "http://localhost:8888/open/unn/ucheck";
+	    const string API_URL_KONGHAO = "https://api.253.com/open/unn/ucheck";
 	
 	    public void Check() {
 	        // 1.调用空号检测api

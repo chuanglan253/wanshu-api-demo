@@ -1,4 +1,4 @@
-package com.chuanglan.wanshu.api.demo.QiYeGongShang;
+package com.chuanglan.wanshu.api.demo.QiYeXingYong;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ public class JingYingYiChangApi {
 
     private static String APP_KEY = "qqqqqqqq";
 
-    private static String API_URL = "https://api.253.com/open/company/abnormal-operating";
+    private static String API_URL = "https://api.253.com/open/entcredit/abnormal-operating";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -28,13 +28,11 @@ public class JingYingYiChangApi {
             //响应code码。200000：成功，其他失败
             String code = jsonObject.get("code").getAsString();
             if ("200000".equals(code) && jsonObject.get("data") != null) {
-            	String pageInfoStr = jsonObject.get("data").getAsJsonObject().get("paging").toString();
-            	System.out.println("公司异常经营信息查询成功，分页信息:"+pageInfoStr);
-                String content = jsonObject.get("data").getAsJsonObject().get("datas").toString();
-                System.out.println("公司异常经营信息查询成功,content is :" + content);
+                String data = jsonObject.get("data").toString();
+                System.out.println("查询成功,返回数据:" + data);
             } else {
                 // 记录错误日志，正式项目中请换成log打印
-                System.out.println("公司异常经营信息查询失败,code:" + code + ",msg:" + jsonObject.get("message").getAsString());
+                System.out.println("查询失败,code:" + code + ",msg:" + jsonObject.get("message").getAsString());
             }
         }
 	}

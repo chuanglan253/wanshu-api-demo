@@ -12,7 +12,7 @@ namespace wanshu_api_demo
 	{
 		const string APP_ID_YINHANGKA = "12345678";
         const string APP_KEY_YINHANGKA = "12345678";
-        const string API_URL_YINHANGKA = "http://localhost:8888/open/bankcard/card-auth";
+        const string API_URL_YINHANGKA = "https://api.253.com/open/bankcard/card-auth";
     
 		public void Check()
 		{

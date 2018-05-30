@@ -15,7 +15,7 @@ def post(url, data):
                'Accept-Charset': 'utf-8'}
     request = Request(url, params, headers)
     try:
-        response = urlopen(request, timeout=3)
+        response = urlopen(request, timeout=10)
     except URLError, e:
         print u'发送请求失败，原因：', e
         return None
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     # 2.处理返回结果
     result = json.loads(result_data) if result_data is not None else exit(1)
     # 响应code码。200000：成功，其他失败
-    if result is None or '200000' != result['code']:
+    if result is None or '200000' != result['code'] or 'data' not in result:
         print u'调用身份信息检测失败,code:', result['code'], ',msg:', result['message']
     else:
         # 调用身份信息检测成功
