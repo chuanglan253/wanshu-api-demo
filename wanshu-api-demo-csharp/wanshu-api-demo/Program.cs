@@ -7,7 +7,7 @@ namespace wanshu_api_demo
 		public static void Main(string[] args)
 		{
 			while(true){
-				Console.WriteLine("请输入项目代号:1.羊毛党检测 2.空号检测 3.身份认证 4.银行卡认证 5.企业工商 6.企业信用 7.司法风险 8.知识产权 99.余额查询 0.退出");
+				Console.WriteLine("请输入项目代号:1.羊毛党检测 2.空号检测 3.身份认证 4.银行卡认证 5.企业工商 6.企业信用 7.司法风险 8.知识产权 9.图片OCR 10. 人证核验 99.余额查询 0.退出");
 
 				string str = Console.ReadLine();
 				switch(str){
@@ -154,6 +154,38 @@ namespace wanshu_api_demo
 								break;
 							case "5":
 								new ZuoPinZhuZuoQuanApi().Check();
+								break;
+							default:
+								Console.WriteLine("输入错误");
+								break;
+						}
+						break;
+					case "9":
+						Console.WriteLine("请输入子项目代号:");
+						Console.WriteLine("1.身份证OCR");
+						string str_biz4 = Console.ReadLine();
+						switch(str_biz4){
+							case "1":
+								new IdOcrApi().Check();
+								break;
+							default:
+								Console.WriteLine("输入错误");
+								break;
+						}
+						break;
+					case "10":
+						Console.WriteLine("请输入子项目代号:");
+						Console.WriteLine("1.活体检测	2.人证对比	3.人证核验");
+						string str_biz5 = Console.ReadLine();
+						switch(str_biz5){
+							case "1":
+								new HuoTiJianCeApi().Check();
+								break;
+							case "2":
+								new RenZhengDuiBiApi().Check();
+								break;
+							case "3":
+								new RenZhengHeYanApi().Check();
 								break;
 							default:
 								Console.WriteLine("输入错误");
