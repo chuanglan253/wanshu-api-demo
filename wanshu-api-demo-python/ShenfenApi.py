@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-# coding=utf8
+#coding=utf-8
 
 from urllib2 import Request, urlopen, URLError
 import urllib
 import json
 
-#身份二要素认证
+#身份证二要素认证
 
 def post(url, data):
     params = urllib.urlencode(data)
@@ -15,7 +15,7 @@ def post(url, data):
                'Accept-Charset': 'utf-8'}
     request = Request(url, params, headers)
     try:
-        response = urlopen(request, timeout=10)
+        response = urlopen(request, timeout=3)
     except URLError, e:
         print u'发送请求失败，原因：', e
         return None
@@ -24,19 +24,19 @@ def post(url, data):
 
 
 if __name__ == "__main__":
-    invoke_url = 'https://api.253.com/open/idcard/id-verify'
+    invoke_url = 'https://api.253.com/open/idcard/id-card-auth'
     invoke_data = {'appId': '12345678', 'appKey': '12345678', 'name': '王**', 'idNum': '34221119930101****'}
 
-    # 1. 调用身份信息检测api
+    # 1. 调用api
     result_data = post(invoke_url, invoke_data)
     # 2.处理返回结果
     result = json.loads(result_data) if result_data is not None else exit(1)
     # 响应code码。200000：成功，其他失败
-    if result is None or '200000' != result['code'] or 'data' not in result:
-        print u'调用身份信息检测失败,code:', result['code'], ',msg:', result['message']
+    if result is None or '200000' != result['code']:
+        print u'调用失败,code:', result['code'], ',msg:', result['message']
     else:
         # 调用身份信息检测成功
         # 解析结果数据，进行业务处理
         # 检测结果  000000：成功，其他失败
         status = result['data'][0]['value']
-        print u'调用身份信息检测成功,status:', status
+        print u'调用成功,status:', status

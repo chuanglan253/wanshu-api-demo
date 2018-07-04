@@ -1,12 +1,11 @@
-﻿#!/usr/bin/env python
-# coding=utf-8
+#!/usr/bin/env python
+#coding=utf-8
 
 from urllib2 import Request, urlopen, URLError
 import urllib
 import json
-import base64
 
-# 人证对比接口样例
+#运营商三要素认证
 
 def post(url, data):
     params = urllib.urlencode(data)
@@ -16,7 +15,7 @@ def post(url, data):
                'Accept-Charset': 'utf-8'}
     request = Request(url, params, headers)
     try:
-        response = urlopen(request, timeout=10)
+        response = urlopen(request, timeout=3)
     except URLError, e:
         print u'发送请求失败，原因：', e
         return None
@@ -25,19 +24,8 @@ def post(url, data):
 
 
 if __name__ == "__main__":
-
-    # 自拍照片
-    imageFile = open(r'd:\live-demo.jpg', 'rb')
-    base64Str = base64.b64encode(imageFile.read())
-    imageFile.close()
-
-    # 身份证照片
-    imageFile2 = open(r'd:\idcard-demo.jpg','rb')
-    base64Str2 = base64.b64encode(imageFile2.read())
-    imageFile2.close()
-
-    invoke_url = 'https://api.253.com/open/i/witness/face-contrast'
-    invoke_data = {'appId': 'qqqqqqqq', 'appKey': 'qqqqqqqq', 'imageType': 'BASE64','liveImage': base64Str,'idCardImage': base64Str2}
+    invoke_url = 'https://api.253.com/open/carriers/carriers-auth'
+    invoke_data = {'appId': '12345678', 'appKey': '12345678', 'name': '王**', 'idNum': '34221119930101****', 'mobile' : '186****2842'}
 
     # 1. 调用api
     result_data = post(invoke_url, invoke_data)
@@ -47,7 +35,7 @@ if __name__ == "__main__":
     if result is None or '200000' != result['code']:
         print u'调用失败,code:', result['code'], ',msg:', result['message']
     else:
-        # 调用成功
         # 解析结果数据，进行业务处理
-        # 检测结果
-        print u'调用成功,result:', result['data']
+        # 检测结果  000000：成功，其他失败
+        status = result['data'][0]['value']
+        print u'调用成功,status:', status
