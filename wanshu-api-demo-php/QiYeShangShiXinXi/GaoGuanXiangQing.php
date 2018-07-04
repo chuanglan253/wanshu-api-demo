@@ -1,11 +1,14 @@
 <?php
 
-	$url = 'https://api.253.com/open/i/witness/face-check';
+	$url = 'https://api.253.com/open/stock/senior-manager';
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看
-		'image' => '', // 活体检测自拍照，支持url或base64，图片大小不能大于2M,支持图片类型：jpg/png/bmp
-		'imageType' => '', // 图片类型，枚举值：URL-图片路径 ,BASE64 –图片BASE64编码 默认 URL
+		'companyKey' => '', // 搜索关键字（公司全名或公司id）
+		'keyType' => '', // 搜索关键字类型（1-公司名、2-公司id）
+		'pageSize' => '', // 每页条数，默认为10,最大不超过20条
+		'pageIndex' => '', // 页码（从0开始）
+		'managerType' => '', // 高管类型：1代表董事会 2代表监事会，3代表高管
 	];
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

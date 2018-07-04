@@ -1,11 +1,13 @@
 <?php
 
-	$url = 'https://api.253.com/open/i/witness/face-check';
+	$url = 'https://api.253.com/open/stock/ten-tradableholders';
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看
-		'image' => '', // 活体检测自拍照，支持url或base64，图片大小不能大于2M,支持图片类型：jpg/png/bmp
-		'imageType' => '', // 图片类型，枚举值：URL-图片路径 ,BASE64 –图片BASE64编码 默认 URL
+		'companyKey' => '', // 搜索关键字（公司全名或公司id）
+		'keyType' => '', // 搜索关键字类型（1-公司名、2-公司id）
+		'year' => '', // 年份，例：2017
+		'quarter' => '', // 季度（1-第一季度 2-第二季度 3-第三季度 4-第四季度）
 	];
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
