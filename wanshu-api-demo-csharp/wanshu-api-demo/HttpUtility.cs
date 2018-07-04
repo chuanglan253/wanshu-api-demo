@@ -17,10 +17,10 @@ namespace wanshu_api_demo
 		static readonly Encoding ENCODING = Encoding.UTF8;
 	
 		//请求连接限时
-		const int CON_TIMEOUT = 3 * 1000;
+		const int CON_TIMEOUT = 8 * 1000;
 	
 		//数据传输限时
-		const int READ_WRITE_TIMEOUT = 5 * 1000;
+		const int READ_WRITE_TIMEOUT = 8 * 1000;
 	
 		static HttpUtility()
 		{

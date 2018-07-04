@@ -52,9 +52,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="YunYingShangApi.cs" />
+    <Compile Include="HaoMaShiShi.cs" />
     <Compile Include="HttpUtility.cs" />
     <Compile Include="KonghaoApi.cs" />
+    <Compile Include="Ocr\YingHangKaOcrApi.cs" />
+    <Compile Include="Ocr\YingYeZhiZhaoOcrApi.cs" />
+    <Compile Include="Ocr\JiaShiZhengOcrApi.cs" />
     <Compile Include="Ocr\IdOcrApi.cs" />
+    <Compile Include="Ocr\XingShiZhengOcrApi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="QiYeGongShang\BianGengJiLuApi.cs" />
     <Compile Include="QiYeGongShang\DongJianGaoApi.cs" />
@@ -80,6 +86,18 @@
     <Compile Include="RenZhengHeYan\HuoTiJianCeApi.cs" />
     <Compile Include="RenZhengHeYan\RenZhengDuiBiApi.cs" />
     <Compile Include="RenZhengHeYan\RenZhengHeYanApi.cs" />
+    <Compile Include="RenZhengHeYan\RenZhengHeYanPlusApi.cs" />
+    <Compile Include="ShangShiXinXi\CanGuKongGuApi.cs" />
+    <Compile Include="ShangShiXinXi\FaXingXiangGuanApi.cs" />
+    <Compile Include="ShangShiXinXi\FenHongQingKuangApi.cs" />
+    <Compile Include="ShangShiXinXi\GaoGuanXiangQingApi.cs" />
+    <Compile Include="ShangShiXinXi\GongSiGongGaoApi.cs" />
+    <Compile Include="ShangShiXinXi\GuBenBianDongApi.cs" />
+    <Compile Include="ShangShiXinXi\GuBenJieGouApi.cs" />
+    <Compile Include="ShangShiXinXi\PeiGuQingKuangApi.cs" />
+    <Compile Include="ShangShiXinXi\QiYeJieShaoApi.cs" />
+    <Compile Include="ShangShiXinXi\ShiDaGuDongApi.cs" />
+    <Compile Include="ShangShiXinXi\ShiDaLiuTongGuDongApi.cs" />
     <Compile Include="ShenfenApi.cs" />
     <Compile Include="SiFaFengXian\BeiZhiXingRenApi.cs" />
     <Compile Include="SiFaFengXian\FaYuanGongGaoApi.cs" />
@@ -102,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib" />
+    <Folder Include="ShangShiXinXi" />
     <Folder Include="RenZhengHeYan" />
     <Folder Include="Ocr" />
     <Folder Include="QiYeGongShang" />

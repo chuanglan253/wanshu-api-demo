@@ -10,9 +10,9 @@ namespace wanshu_api_demo
 	 */
 	public class ShenfenApi
 	{
-		const string APP_ID_SHENFEN = "12345678";
-	    const string APP_KEY_SHENFEN = "12345678";
-	    const string API_URL_SHENFEN = "https://api.253.com/open/idcard/id-verify";
+		const string APP_ID_SHENFEN = "qqqqqqqq";
+	    const string APP_KEY_SHENFEN = "qqqqqqqq";
+	    const string API_URL_SHENFEN = "https://api.253.com/open/idcard/id-card-auth";
 	
 	    public void Check() {
 	        // 1.调用身份信息校验api
