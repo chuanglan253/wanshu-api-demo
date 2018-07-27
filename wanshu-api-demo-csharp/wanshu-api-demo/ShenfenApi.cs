@@ -26,8 +26,8 @@ namespace wanshu_api_demo
 	                // 调用身份信息校验成功
 	                // 解析结果数据，进行业务处理
 	                // 校验状态码  000000：成功，其他失败
-	                string value = jsonObject["data"][0]["value"].ToString();
-	                Console.WriteLine("调用身份信息校验成功,value:" + value);
+	                string content = jsonObject["data"].ToString();
+                	Console.WriteLine("查询成功,content is :" + content);
 	            } else {
 	                // 记录错误日志，正式项目中请换成log打印
 	                Console.WriteLine("调用身份信息校验失败,code:" + code + ",msg:" + jsonObject["message"]);

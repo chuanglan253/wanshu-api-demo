@@ -1,6 +1,6 @@
 <?php
 
-	$url = 'https://api.253.com/open/woolCheck';
+	$url = 'https://api.253.com/open/wool/wcheck"';
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看

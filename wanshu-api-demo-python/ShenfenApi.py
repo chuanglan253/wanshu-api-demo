@@ -26,7 +26,7 @@ def post(url, data):
 if __name__ == "__main__":
     invoke_url = 'https://api.253.com/open/idcard/id-card-auth'
     invoke_data = {'appId': '12345678', 'appKey': '12345678', 'name': '王**', 'idNum': '34221119930101****'}
-
+	
     # 1. 调用api
     result_data = post(invoke_url, invoke_data)
     # 2.处理返回结果
@@ -38,5 +38,4 @@ if __name__ == "__main__":
         # 调用身份信息检测成功
         # 解析结果数据，进行业务处理
         # 检测结果  000000：成功，其他失败
-        status = result['data'][0]['value']
-        print u'调用成功,status:', status
+        print u'调用成功,data:', result['data']
