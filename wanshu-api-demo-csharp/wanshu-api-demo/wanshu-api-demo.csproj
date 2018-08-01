@@ -52,6 +52,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KonghaoPiLiangApi.cs" />
+    <Compile Include="Ocr\FaPiaoOcrApi.cs" />
+    <Compile Include="Ocr\HuZhaoOcrApi.cs" />
+    <Compile Include="Ocr\PHITinOCR.cs" />
+    <Compile Include="Ocr\PHIUmpidOCR.cs" />
     <Compile Include="YunYingShangApi.cs" />
     <Compile Include="HaoMaShiShi.cs" />
     <Compile Include="HttpUtility.cs" />

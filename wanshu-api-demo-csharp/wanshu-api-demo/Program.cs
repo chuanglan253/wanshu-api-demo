@@ -15,7 +15,20 @@ namespace wanshu_api_demo
 						new YangmaodangApi().Check();
 						break;
 					case "2":
-						new KonghaoApi().Check();
+						Console.WriteLine("请输入子项目代号:");
+						Console.WriteLine("1.空号检测	2.空号批量检测");
+						string str_biz_kh = Console.ReadLine();
+						switch(str_biz_kh){
+							case "1":
+								new KonghaoApi().Check();
+								break;
+							case "2":
+								new KonghaoPiLiangApi().Check();
+								break;
+							default:
+								Console.WriteLine("输入错误");
+								break;
+						}
 						break;
 					case "3":
 						new ShenfenApi().Check();
@@ -162,7 +175,7 @@ namespace wanshu_api_demo
 						break;
 					case "9":
 						Console.WriteLine("请输入子项目代号:");
-						Console.WriteLine("1.身份证OCR 2.驾驶证OCR 3.行驶证OCR 4.银行卡OCR 5.营业执照OCR");
+						Console.WriteLine("1.身份证OCR 2.驾驶证OCR 3.行驶证OCR 4.银行卡OCR 5.营业执照OCR 6.护照OCR 7.发票OCR 8.菲律宾TinORC 9.菲律宾UmpIdOCR");
 						string str_biz4 = Console.ReadLine();
 						switch(str_biz4){
 							case "1":
@@ -179,6 +192,15 @@ namespace wanshu_api_demo
 								break;
 							case "5":
 								new YingYeZhiZhaoOcrApi().Check();
+								break;
+							case "6":
+								new HuZhaoOcrApi().Check();
+							case "7":
+								new FaPiaoOcrApi().Check();
+							case "8":
+								new PHITinOCR().Check();
+							case "9":
+								new PHIUmpidOCR().Check();								
 								break;
 							default:
 								Console.WriteLine("输入错误");
