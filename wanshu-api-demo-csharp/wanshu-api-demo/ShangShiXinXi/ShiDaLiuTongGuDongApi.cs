@@ -14,7 +14,7 @@ namespace wanshu_api_demo
 	    const string APP_KEY = "qqqqqqqq";	
 	    const string API_URL = "https://api.253.com/open/stock/ten-tradableholders";
 	
-	    public void Check() {
+	    public static void Main(string[] args) {
 	        // 1.调用api
 	        JObject jsonObject = invoke();
 	
@@ -30,10 +30,11 @@ namespace wanshu_api_demo
 	                Console.WriteLine("查询失败,code:" + code + ",msg:" + jsonObject["message"]);
 	            }
 	        }
+	        Console.ReadLine();
 	    }
 	
 	
-	    private JObject invoke() {
+	    static JObject invoke()  {
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID);
 	        dic.Add("appKey", APP_KEY);

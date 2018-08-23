@@ -14,7 +14,7 @@ namespace wanshu_api_demo
 	    const string APP_KEY_KONGHAO = "12345678";	
 	    const string API_URL_KONGHAO = "https://api.253.com/open/unn/ucheck";
 	
-	    public void Check() {
+	    public static void Main(string[] args) {
 	        // 1.调用空号检测api
 	        JObject jsonObject = invokeKonghao("1371234****");
 	
@@ -33,10 +33,11 @@ namespace wanshu_api_demo
 	                Console.WriteLine("调用空号检测失败,code:" + code + ",msg:" +  jsonObject["message"]);
 	            }
 	        }
+	        Console.ReadLine();
 	    }
 	
 	
-	    private JObject invokeKonghao(string mobile) {
+	    static JObject invokeKonghao(string mobile) {
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID_KONGHAO);
 	        dic.Add("appKey", APP_KEY_KONGHAO);

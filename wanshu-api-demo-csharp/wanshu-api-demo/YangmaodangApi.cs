@@ -8,13 +8,13 @@ namespace wanshu_api_demo
 	/**
 	 * 羊毛党检测
 	 */
-	class YangmaodangApi
+	public class YangmaodangApi
 	{
 		const string APP_ID_YANGMAODANG = "12345678";
         const string APP_KEY_YANGMAODANG = "12345678";
         const string API_URL_YANGMAODANG = "https://api.253.com/open/wool/wcheck";
     
-		public void Check()
+		public static void Main(string[] args)
 		{
 			// 1.调用羊毛党检测api
 	        JObject jsonObject = invokeYangmaodang("1705003****", "*.*.*.*");
@@ -34,10 +34,11 @@ namespace wanshu_api_demo
 	                Console.WriteLine("调用羊毛党检测失败,code:" + code + ",msg:" + jsonObject["message"]);
 	            }
 	        }
+	        Console.ReadLine();
 		}
 		
 		
-		private JObject  invokeYangmaodang(string mobile, string ip) {
+		static JObject  invokeYangmaodang(string mobile, string ip) {
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID_YANGMAODANG);
 	        dic.Add("appKey", APP_KEY_YANGMAODANG);

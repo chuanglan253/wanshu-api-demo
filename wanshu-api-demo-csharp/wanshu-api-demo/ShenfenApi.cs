@@ -14,7 +14,7 @@ namespace wanshu_api_demo
 	    const string APP_KEY_SHENFEN = "qqqqqqqq";
 	    const string API_URL_SHENFEN = "https://api.253.com/open/idcard/id-card-auth";
 	
-	    public void Check() {
+	    public static void Main(string[] args) {
 	        // 1.调用身份信息校验api
 	        JObject jsonObject = invokeShenfen("李*", "34253019930526****");
 	
@@ -33,10 +33,11 @@ namespace wanshu_api_demo
 	                Console.WriteLine("调用身份信息校验失败,code:" + code + ",msg:" + jsonObject["message"]);
 	            }
 	        }
+	        Console.ReadLine();
 	    }
 	
 	
-	    private JObject invokeShenfen(string name, string idNum) {
+	    static JObject invokeShenfen(string name, string idNum) {
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID_SHENFEN);
 	        dic.Add("appKey", APP_KEY_SHENFEN);

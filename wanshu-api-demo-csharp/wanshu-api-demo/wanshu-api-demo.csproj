@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <NoWin32Manifest>False</NoWin32Manifest>
+    <StartupObject>wanshu_api_demo.FaPiaoOcrApi</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -57,6 +58,7 @@
     <Compile Include="Ocr\HuZhaoOcrApi.cs" />
     <Compile Include="Ocr\PHITinOCR.cs" />
     <Compile Include="Ocr\PHIUmpidOCR.cs" />
+    <Compile Include="YinhangkaJingXiBanApi.cs" />
     <Compile Include="YunYingShangApi.cs" />
     <Compile Include="HaoMaShiShi.cs" />
     <Compile Include="HttpUtility.cs" />
@@ -66,7 +68,6 @@
     <Compile Include="Ocr\JiaShiZhengOcrApi.cs" />
     <Compile Include="Ocr\IdOcrApi.cs" />
     <Compile Include="Ocr\XingShiZhengOcrApi.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="QiYeGongShang\BianGengJiLuApi.cs" />
     <Compile Include="QiYeGongShang\DongJianGaoApi.cs" />
     <Compile Include="QiYeGongShang\DuiWaiTouZiApi.cs" />
