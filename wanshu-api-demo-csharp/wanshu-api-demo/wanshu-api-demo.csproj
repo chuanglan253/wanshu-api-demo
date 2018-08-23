@@ -55,9 +55,18 @@
   <ItemGroup>
     <Compile Include="KonghaoPiLiangApi.cs" />
     <Compile Include="Ocr\FaPiaoOcrApi.cs" />
+    <Compile Include="Ocr\FeiLvBinSSSOCRApi.cs" />
     <Compile Include="Ocr\HuZhaoOcrApi.cs" />
     <Compile Include="Ocr\PHITinOCR.cs" />
     <Compile Include="Ocr\PHIUmpidOCR.cs" />
+    <Compile Include="Ocr\YinNiShenFenZhengOCRApi.cs" />
+    <Compile Include="QiYeGongShang\GongShangXinXiQuanXiApi.cs" />
+    <Compile Include="QiYeGongShang\LianXiFangShiV2Api.cs" />
+    <Compile Include="QiYeGongShang\YingYeZhiZhaoV2Api.cs" />
+    <Compile Include="QiYeXinYong\HaiGuanXinYongApi.cs" />
+    <Compile Include="QiYeXinYong\XinYongFengXianQuanXiApi.cs" />
+    <Compile Include="XinYongFanQiZha\DiZhiApi.cs" />
+    <Compile Include="XinYongFanQiZha\YouJianApi.cs" />
     <Compile Include="YinhangkaJingXiBanApi.cs" />
     <Compile Include="YunYingShangApi.cs" />
     <Compile Include="HaoMaShiShi.cs" />
@@ -132,6 +141,7 @@
     <Folder Include="QiYeGongShang" />
     <Folder Include="QiYeXinYong" />
     <Folder Include="SiFaFengXian" />
+    <Folder Include="XinYongFanQiZha" />
     <Folder Include="ZhiShiChanChuan" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
