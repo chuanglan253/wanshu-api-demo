@@ -25,7 +25,7 @@ namespace wanshu_api_demo
 	            if ("200000".Equals(code) && null != jsonObject["data"]) {
 	                // 调用空号检测成功
 	                // 解析结果数据，进行业务处理
-	                // 检测结果  0:空号  1:实号  2:停机  3:库无  4:沉默号
+	                // 检测结果
 	                string status = jsonObject["data"]["status"].ToString();
 	                Console.WriteLine("调用空号检测成功,status:" + status);
 	            } else {

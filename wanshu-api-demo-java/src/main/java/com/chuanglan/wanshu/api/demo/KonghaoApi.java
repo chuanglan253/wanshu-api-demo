@@ -30,7 +30,7 @@ public class KonghaoApi {
             if ("200000".equals(code) && jsonObject.get("data") != null) {
                 // 调用空号检测成功
                 // 解析结果数据，进行业务处理
-                // 检测结果  0:空号  1:实号  2:停机  3:库无  4:沉默号
+                // 检测结果
                 String status = jsonObject.get("data").getAsJsonObject().get("status").getAsString();
                 System.out.println("调用空号检测成功,status:" + status);
             } else {

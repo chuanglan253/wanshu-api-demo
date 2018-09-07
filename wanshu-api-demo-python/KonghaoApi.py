@@ -37,6 +37,6 @@ if __name__ == "__main__":
     else:
         # 调用空号检测成功
         # 解析结果数据，进行业务处理
-        # 检测结果   0:空号  1:实号  2:停机  3:库无  4:沉默号
+        # 检测结果
         status = result['data']['status']
         print u'调用空号检测成功,status:', status

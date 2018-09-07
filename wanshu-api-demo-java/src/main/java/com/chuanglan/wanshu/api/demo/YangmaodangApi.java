@@ -30,7 +30,7 @@ public class YangmaodangApi {
             if ("200000".equals(code) && jsonObject.get("data") != null) {
                 // 调用羊毛党检测成功
                 // 解析结果数据，进行业务处理
-                // 检测结果  W1：白名单  W2：疑似白名单  B1 ：黑名单  B2 ：疑似黑名单  N：未找到
+                // 检测结果
                 String status = jsonObject.get("data").getAsJsonObject().get("status").getAsString();
                 System.out.println("调用羊毛党检测成功,status:" + status);
             } else {
