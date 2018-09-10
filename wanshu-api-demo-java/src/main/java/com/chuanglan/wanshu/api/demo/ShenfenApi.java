@@ -11,9 +11,9 @@ import java.util.Map;
  */
 public class ShenfenApi {
 
-    private static String APP_ID_SHENFEN = "MT4sIGoz";
+    private static String APP_ID_SHENFEN = "qqqqqqqq";
 
-    private static String APP_KEY_SHENFEN = "jcYcHOtf";
+    private static String APP_KEY_SHENFEN = "qqqqqqqq";
 
     private static String API_URL_SHENFEN = "https://api.253.com/open/idcard/id-card-auth";
 
