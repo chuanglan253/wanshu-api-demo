@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 邮件反欺诈接口
+ * 地址反欺诈接口
  */
-public class YouJianApi {
+public class DiZhiApi {
 
     private static String APP_ID = "qqqqqqqq";
 
     private static String APP_KEY = "qqqqqqqq";
 
-    private static String API_URL = "https://api.253.com/open/antifraud/demail";
+    private static String API_URL = "https://api.253.com/open/wool/dadd";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -42,7 +42,7 @@ public class YouJianApi {
         Map<String, String> params = new HashMap<String, String>();
         params.put("appId", APP_ID);
         params.put("appKey", APP_KEY);
-        params.put("email", "****@163.com");//邮件地址
+        params.put("address", "上海市松江区茸梅路288弄");//邮件地址
         String result = HttpUtils.post(API_URL, params);
         // 解析json,并返回结果
         return jsonParser.parse(result).getAsJsonObject();
