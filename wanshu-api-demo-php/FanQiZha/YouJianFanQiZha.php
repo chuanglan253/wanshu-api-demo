@@ -1,10 +1,9 @@
 <?php
-
-    $url = 'https://api.253.com/open/antifraud/dadd';
+    $url = 'https://api.253.com/open/wool/demail';
     $params = [
         'appId' => 'xxx', // appId,登录万数平台查看
         'appKey' => 'xxx', // appKey,登录万数平台查看
-        'address' => '', // 地址
+        'email' => '', // 邮箱地址
     ];
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
