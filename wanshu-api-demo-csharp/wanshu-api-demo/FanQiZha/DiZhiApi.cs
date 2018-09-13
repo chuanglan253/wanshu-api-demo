@@ -6,13 +6,13 @@ using Newtonsoft.Json.Linq;
 namespace wanshu_api_demo
 {
 	/**
-	 * 邮件反欺诈接口
+	 * 地址反欺诈接口
 	 */
-	public class YouJianApi
+	public class DiZhiApi
 	{
 		const string APP_ID_KONGHAO = "qqqqqqqq";
 	    const string APP_KEY_KONGHAO = "qqqqqqqq";	
-	    const string API_URL_KONGHAO = "https://api.253.com/open/antifraud/demail";
+	    const string API_URL_KONGHAO = "https://api.253.com/open/wool/dadd";
 	
 	    public static void Main(string[] args) {
 	        // 1.调用api
@@ -38,7 +38,7 @@ namespace wanshu_api_demo
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID_KONGHAO);
 	        dic.Add("appKey", APP_KEY_KONGHAO);
-	        dic.Add("email", "****@163.com");
+	        dic.Add("address", "上海市松江区茸梅路288弄");
 	        string result = HttpUtility.Post(API_URL_KONGHAO, dic);
 	        // 解析json,并返回结果
 	         return string.IsNullOrEmpty(result) ? null : (JObject)JsonConvert.DeserializeObject(result);
