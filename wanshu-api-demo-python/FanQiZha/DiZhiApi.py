@@ -5,7 +5,7 @@ from urllib2 import Request, urlopen, URLError
 import urllib
 import json
 
-#邮件反欺诈
+#地址反欺诈
 
 def post(url, data):
     params = urllib.urlencode(data)
@@ -24,10 +24,10 @@ def post(url, data):
 
 
 if __name__ == "__main__":
-    invoke_url = 'https://api.253.com/open/antifraud/demail'
-    invoke_data = {'appId': '12345678', 'appKey': '12345678', 'email': '********@163.com'}
+    invoke_url = 'https://api.253.com/open/wool/dadd'
+    invoke_data = {'appId': '12345678', 'appKey': '12345678', 'address': '上海市松江区茸梅路288弄'}
 
-    # 1. 调用邮件反欺诈api
+    # 1. 调用地址反欺诈api
     result_data = post(invoke_url, invoke_data)
     # 2.处理返回结果
     result = json.loads(result_data) if result_data is not None else exit(1)
