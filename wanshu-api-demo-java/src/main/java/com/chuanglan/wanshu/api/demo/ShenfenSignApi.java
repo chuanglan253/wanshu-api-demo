@@ -1,14 +1,9 @@
 package com.chuanglan.wanshu.api.demo;
 
-import com.google.common.collect.Sets;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
+import java.util.*;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -16,11 +11,11 @@ import javax.crypto.spec.SecretKeySpec;
 /**
  * 身份证校验V2(签名版)demo
  */
-public class ShenfenApiV2 {
+public class ShenfenSignApi {
 
-    private static String APP_ID_SHENFEN = "xxxxxxxx";//appId
+    private static String APP_ID_SHENFEN = "qqqqqqqq";//appId
 
-    private static String APP_KEY_SHENFEN = "xxxxxxxx";//appKey
+    private static String APP_KEY_SHENFEN = "qqqqqqqq";//appKey
 
     private static String URL = "https://api.253.com/open/idcard/id-card-auth/vs";//访问地址
 
@@ -29,21 +24,19 @@ public class ShenfenApiV2 {
 
     public static void main(String[] args) {
 
-        String name = "xxx";//用户姓名
-        String idNum = "xxxxxxxxxxxxxxxxxx";//用户身份证号
+        String name = "刘**";//用户姓名
+        String idNum = "431223198907******";//用户身份证号
 
         //生成签名
-        ShenfenApiV2 shen = new ShenfenApiV2();
-        Map<String, Object> requestMap = shen.getPostData(APP_ID_SHENFEN, name, idNum);
+        Map<String, Object> requestMap = getPostData(APP_ID_SHENFEN, name, idNum);
 
-        String requestStr = shen.requestMap2Str(requestMap);
+        String requestStr = requestMap2Str(requestMap);
         System.out.println("请求参数" + requestStr);
-        String sign = shen.hmacSHA1Encrypt(requestStr, APP_KEY_SHENFEN);////生成的签名字符串
-
+        String sign = hmacSHA1Encrypt(requestStr, APP_KEY_SHENFEN);////生成的签名字符串
         System.out.println("签名：" + sign);
 
         // 1.调用身份信息校验api
-        final JsonObject jsonObject = ShenfenApiV2.invokeShenfen(name, idNum, sign);
+        final JsonObject jsonObject = invokeShenfen(name, idNum, sign);
 
         // 2.处理返回结果
         if (jsonObject != null) {
@@ -69,7 +62,7 @@ public class ShenfenApiV2 {
      * @param idNum
      * @return
      */
-    private Map<String, Object> getPostData(String appId, String name, String idNum) {
+    private static Map<String, Object> getPostData(String appId, String name, String idNum) {
         Map<String, Object> requestMap = new HashMap<>();
         requestMap.put("idNum", idNum);
         requestMap.put("name", name);
@@ -131,13 +124,12 @@ public class ShenfenApiV2 {
      * @param requestMap
      * @return
      */
-    private String requestMap2Str(Map<String, Object> requestMap) {
-        Set<String> stringSet = Sets.newTreeSet(requestMap.keySet());
+    private static String requestMap2Str(Map<String, Object> requestMap) {
+        List<String>  list = new ArrayList<>(requestMap.keySet());
+        Collections.sort(list);
         StringBuilder stringBuilder = new StringBuilder();
-        for (String str : stringSet) {
-            if (!str.equals("sign")) {
-                stringBuilder.append(str).append(requestMap.get(str));
-            }
+        for(String key : list){
+                stringBuilder.append(key).append(requestMap.get(key));
         }
         return stringBuilder.toString();
     }
