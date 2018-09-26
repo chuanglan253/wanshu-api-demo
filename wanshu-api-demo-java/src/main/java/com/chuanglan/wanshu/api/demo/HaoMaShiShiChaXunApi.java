@@ -32,8 +32,7 @@ public class HaoMaShiShiChaXunApi {
                 // 调用成功
                 // 解析结果数据，进行业务处理
                 // 校验状态码  000000：成功，其他失败
-                String value = jsonObject.get("data").getAsJsonArray().get(0).getAsJsonObject().get("value").getAsString();
-                System.out.println("调用成功,value:" + value);
+				System.out.println("调用成功,data:"+jsonObject.get("data").toString());
             } else {
                 // 记录错误日志，正式项目中请换成log打印
                 System.out.println("调用失败,code:" + code + ",msg:" + jsonObject.get("message").getAsString());
