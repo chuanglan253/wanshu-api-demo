@@ -1,6 +1,6 @@
 <?php
 
-	$url = 'https://api.253.com/open/idVerify';
+	$url = 'https://api.253.com/open/idcard/id-card-auth';
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看
