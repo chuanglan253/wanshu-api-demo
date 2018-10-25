@@ -8,7 +8,7 @@ namespace wanshu_api_demo
 	/**
 	 * 企业关键词模糊查询V2.0
 	 */
-	public class MoHuChaXunApi
+	public class MoHuChaXunV2Api
 	{
 		const string APP_ID = "qqqqqqqq";
 	    const string APP_KEY = "qqqqqqqq";	

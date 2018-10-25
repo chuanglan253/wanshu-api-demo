@@ -4,10 +4,10 @@
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看
-		'image' => '', // 活体检测自拍照，支持url或base64，图片大小不能大于2M,支持图片类型：jpg/png/bmp
+		'image' => '', // 活体自拍照，支持base64，图片大小不能大于2M,支持图片类型：jpg/png/bmp
 		'name' => '', // 姓名
 		'cardNum' => '', // 身份号
-		'imageType' => '', // 图片类型，枚举值：URL-图片路径；BASE64 –图片BASE64编码
+		'imageType' => '', // 图片类型，枚举值：–图片BASE64编码
 	];
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
