@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <NoWin32Manifest>False</NoWin32Manifest>
-    <StartupObject>wanshu_api_demo.ShenfenSignApi</StartupObject>
+    <StartupObject>wanshu_api_demo.SanYaoSuXiangXiBanApi</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -69,7 +69,6 @@
     <Compile Include="QiYeXinYong\XinYongFengXianQuanXiApi.cs" />
     <Compile Include="ShenfenSignApi.cs" />
     <Compile Include="YinhangkaJingXiBanApi.cs" />
-    <Compile Include="YunYingShangApi.cs" />
     <Compile Include="HaoMaShiShi.cs" />
     <Compile Include="HttpUtility.cs" />
     <Compile Include="KonghaoApi.cs" />
@@ -124,6 +123,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YinhangkaApi.cs" />
     <Compile Include="YuEChaXunApi.cs" />
+    <Compile Include="YunYingShangSanYaoSu\SanYaoSuXiangXiBanApi.cs" />
+    <Compile Include="YunYingShangSanYaoSu\YunYingShangApi.cs" />
     <Compile Include="ZhiShiChanChuan\RuanJianZhuZuoQuanApi.cs" />
     <Compile Include="ZhiShiChanChuan\ShangBiaoXinXiApi.cs" />
     <Compile Include="ZhiShiChanChuan\YuMingBeiAnApi.cs" />
@@ -143,6 +144,7 @@
     <Folder Include="QiYeGongShang" />
     <Folder Include="QiYeXinYong" />
     <Folder Include="SiFaFengXian" />
+    <Folder Include="YunYingShangSanYaoSu" />
     <Folder Include="ZhiShiChanChuan" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

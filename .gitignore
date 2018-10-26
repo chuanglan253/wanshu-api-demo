@@ -17,3 +17,4 @@ target/
 ##---------C#--------##
 bin/
 obj/
+/wanshu-api-demo-csharp/wanshu-api-demo-csharp.sln
