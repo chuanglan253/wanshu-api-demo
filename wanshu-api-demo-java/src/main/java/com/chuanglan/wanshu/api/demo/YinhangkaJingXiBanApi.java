@@ -32,7 +32,7 @@ public class YinhangkaJingXiBanApi {
                 // 调用成功
                 // 解析结果数据，进行业务处理
                 // 认证结果
-                System.out.println("调用成功,data:" + jsonObject.get("data").getAsString());
+                System.out.println("调用成功,data:" + jsonObject.get("data").toString());
             } else {
                 // 记录错误日志，正式项目中请换成log打印
                 System.out.println("调用失败,code:" + code + ",msg:" + jsonObject.get("message").getAsString());
