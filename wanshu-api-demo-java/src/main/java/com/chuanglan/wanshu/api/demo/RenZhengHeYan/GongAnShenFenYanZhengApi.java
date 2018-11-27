@@ -42,12 +42,11 @@ public class GongAnShenFenYanZhengApi {
         Map<String, String> params = new HashMap<String, String>();
         params.put("appId", APP_ID);
         params.put("appKey", APP_KEY);
-        //imageType为URL时，传入照片的网络URL地址, 支持jpg/png/bmp格式；
-        //imageType为BASE64时，传入照片的base64字符编码，base64编码不包含data:image前缀，且图片大小不能大于2M
-        params.put("image", "http://***.***.***/download/pic/image-demo.jpg");
-        params.put("name", "***");
-        params.put("cardNum", "******************");
-        params.put("imageType", "URL"); //图片类型（图片类型：URL或BASE64）
+        //imageType为BASE64，传入照片的base64字符编码，base64编码不包含data:image前缀，且图片大小不能大于2M
+        params.put("image", "/9j/4AAQSkZJRgABAQAASABIAAD*********************************************************************");
+        params.put("name", "张**");
+        params.put("cardNum", "431****************");
+        params.put("imageType", "BASE64"); //图片类型（图片类型：URL或BASE64）
         String result = HttpUtils.post(API_URL, params);
         // 解析json,并返回结果
         return jsonParser.parse(result).getAsJsonObject();

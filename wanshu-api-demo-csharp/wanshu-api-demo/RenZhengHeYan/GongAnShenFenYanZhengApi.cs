@@ -38,8 +38,7 @@ namespace wanshu_api_demo
 	        IDictionary<string, string> dic = new Dictionary<string, string>();
 	        dic.Add("appId", APP_ID);
 	        dic.Add("appKey", APP_KEY);
-	         //imageType为URL时，传入照片的网络URL地址, 支持jpg/png/bmp格式；
-            //imageType固定为BASE64，传入照片的base64字符编码，base64编码不包含data:image前缀，且图片大小不能大于2M
+            //imageType固定为BASE64，传入照片的base64字符编码，base64编码不包含data:image前缀，且图片大小不能大于2M, 支持jpg/bmp格式；
 	        dic.Add("image","图片BASE64编码值");
 	        dic.Add("name", "***");
 			dic.Add("cardNum", "******************");
