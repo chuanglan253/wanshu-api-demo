@@ -45,8 +45,11 @@ public class YangMaoDunBiaoQianBanApi {
         Map<String, String> params = new HashMap<String, String>();
         params.put("appId", APP_ID_YANGMAODANG);
         params.put("appKey", APP_KEY_YANGMAODANG);
+        //手机号码
         params.put("mobile", mobile);
+        //检测手机号的IP地址，非必传(重要，建议传入)
         params.put("ip", ip);
+        //校验类型，枚举值（0,1）。不传或者传0表示mobile字段传递11位手机号码，传1表示mobile字段传递的是32位小写的手机号码MD5值。
         params.put("type", type);
         String result = HttpUtils.post(API_URL_YANGMAODANG, params);
         // 解析json,并返回结果
