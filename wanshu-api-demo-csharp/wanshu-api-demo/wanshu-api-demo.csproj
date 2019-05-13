@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <NoWin32Manifest>False</NoWin32Manifest>
-    <StartupObject>wanshu_api_demo.SanYaoSuXiangXiBanApi</StartupObject>
+    <StartupObject>wanshu_api_demo.RenXiangDuiBiApi</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -102,6 +102,7 @@
     <Compile Include="RenZhengHeYan\RenZhengDuiBiApi.cs" />
     <Compile Include="RenZhengHeYan\RenZhengHeYanApi.cs" />
     <Compile Include="RenZhengHeYan\RenZhengHeYanPlusApi.cs" />
+    <Compile Include="RenZhengHeYan\RenXiangDuiBiApi.cs" />
     <Compile Include="ShangShiXinXi\CanGuKongGuApi.cs" />
     <Compile Include="ShangShiXinXi\FaXingXiangGuanApi.cs" />
     <Compile Include="ShangShiXinXi\FenHongQingKuangApi.cs" />

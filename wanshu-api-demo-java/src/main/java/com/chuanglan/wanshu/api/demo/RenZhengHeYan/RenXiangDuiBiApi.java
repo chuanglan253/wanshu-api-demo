@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 公安身份验证接口样例
+ * 人像对比
  */
-public class GongAnShenFenYanZhengApi {
+public class RenXiangDuiBiApi {
+
     private static String APP_ID = "qqqqqqqq";
 
     private static String APP_KEY = "qqqqqqqq";
 
-    private static String API_URL = "https://api.253.com/open/i/witness/witness-check-police";
-
+    private static String API_URL = "https://api.253.com/open/i/witness/idpic-match";
 
     private static JsonParser jsonParser = new JsonParser();
 
@@ -42,11 +42,11 @@ public class GongAnShenFenYanZhengApi {
         Map<String, String> params = new HashMap<String, String>();
         params.put("appId", APP_ID);
         params.put("appKey", APP_KEY);
-        //imageType为BASE64，传入照片的base64字符编码，base64编码不包含data:image前缀，且图片大小不能大于2M
-        params.put("image", "/9j/4AAQSkZJRgABAQAASABIAAD*********************************************************************");
-        params.put("name", "张**");
-        params.put("cardNum", "431****************");
-        params.put("imageType", "BASE64"); //图片类型（图片类型：URL或BASE64）
+        params.put("name","***");
+        params.put("idNum","******");
+        params.put("facePic", "http://***.***.***/download/pic/live-demo.jpg");
+        params.put("idCardFrontPic", "http://***.***.***/download/pic/id-card-front-demo.jpg"); //图片类型（图片类型：URL或BASE64）
+        params.put("idCardBackPic", "http://***.***.***/download/pic/id-card-back-demo.jpg"); //图片类型（图片类型：URL或BASE64）
         String result = HttpUtils.post(API_URL, params);
         // 解析json,并返回结果
         return jsonParser.parse(result).getAsJsonObject();

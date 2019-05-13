@@ -1,13 +1,14 @@
 <?php
 
-	$url = 'https://api.253.com/open/i/witness/witness-check-police';
+	$url = 'https://api.253.com/open/i/witness/idpic-match';
 	$params = [
 		'appId' => 'xxx', // appId,登录万数平台查看
 		'appKey' => 'xxx', // appKey,登录万数平台查看
-		'image' => '', // 活体自拍照，支持base64，图片大小不能大于2M,支持图片类型：jpg/png/bmp
-		'name' => '', // 姓名
-		'cardNum' => '', // 身份号
-		'imageType' => '', // 图片类型，枚举值：–图片BASE64编码
+		'name' => '***',
+		'idNum' => '******',
+		'facePic' => 'http://***.***.***/download/pic/live-demo.jpg',
+		'idCardFrontPic' => 'http://***.***.***/download/pic/id-card-front-demo.jpg',
+		'idCardBackPic' => 'http://***.***.***/download/pic/id-card-back-demo.jpg',
 	];
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
