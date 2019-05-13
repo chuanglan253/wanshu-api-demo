@@ -8,7 +8,7 @@ namespace wanshu_api_demo
 	/**
 	 * 活体检测接口样例
 	 */
-	public class RenXiangDuiBiApi
+	public class RenXiangBiDuiApi
 	{
 		const string APP_ID = "qqqqqqqq";
 		const string APP_KEY = "qqqqqqqq";

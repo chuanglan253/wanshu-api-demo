@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 人像对比
  */
-public class RenXiangDuiBiApi {
+public class RenXiangBiDuiApi {
 
     private static String APP_ID = "qqqqqqqq";
 
@@ -45,8 +45,8 @@ public class RenXiangDuiBiApi {
         params.put("name","***");
         params.put("idNum","******");
         params.put("facePic", "http://***.***.***/download/pic/live-demo.jpg");
-        params.put("idCardFrontPic", "http://***.***.***/download/pic/id-card-front-demo.jpg"); //图片类型（图片类型：URL或BASE64）
-        params.put("idCardBackPic", "http://***.***.***/download/pic/id-card-back-demo.jpg"); //图片类型（图片类型：URL或BASE64）
+        params.put("idCardFrontPic", "http://***.***.***/download/pic/id-card-front-demo.jpg");
+        params.put("idCardBackPic", "http://***.***.***/download/pic/id-card-back-demo.jpg");
         String result = HttpUtils.post(API_URL, params);
         // 解析json,并返回结果
         return jsonParser.parse(result).getAsJsonObject();
